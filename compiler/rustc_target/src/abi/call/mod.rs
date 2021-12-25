@@ -21,6 +21,7 @@ mod riscv;
 mod s390x;
 mod sparc;
 mod sparc64;
+mod tricore;
 mod wasm;
 mod x86;
 mod x86_64;
@@ -691,6 +692,7 @@ impl<'a, Ty> FnAbi<'a, Ty> {
             "nvptx64" => nvptx64::compute_abi_info(self),
             "hexagon" => hexagon::compute_abi_info(self),
             "riscv32" | "riscv64" => riscv::compute_abi_info(cx, self),
+            "tricore" => tricore::compute_abi_info(self),
             "wasm32" | "wasm64" => {
                 if cx.target_spec().adjust_abi(abi) == spec::abi::Abi::Wasm {
                     wasm::compute_wasm_abi_info(self)

@@ -87,6 +87,7 @@ fn main() {
         "nvptx",
         "hexagon",
         "riscv",
+        "tricore",
         "bpf",
     ];
 

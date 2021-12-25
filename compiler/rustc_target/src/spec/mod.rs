@@ -1014,6 +1014,7 @@ supported_targets! {
     ("armv7-unknown-linux-uclibceabihf", armv7_unknown_linux_uclibceabihf),
 
     ("x86_64-unknown-none", x86_64_unknown_none),
+    ("tricore-unknown-none-elf", tricore_unknown_none_elf),
 }
 
 /// Warnings encountered when parsing the target `json`.

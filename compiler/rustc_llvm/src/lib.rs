@@ -172,6 +172,13 @@ pub fn initialize_available_targets() {
         LLVMInitializeHexagonAsmParser
     );
     init_target!(
+        llvm_component = "tricore",
+        LLVMInitializeTriCoreTargetInfo,
+        LLVMInitializeTriCoreTarget,
+        LLVMInitializeTriCoreTargetMC,
+        LLVMInitializeTriCoreAsmPrinter
+    );
+    init_target!(
         llvm_component = "webassembly",
         LLVMInitializeWebAssemblyTargetInfo,
         LLVMInitializeWebAssemblyTarget,
